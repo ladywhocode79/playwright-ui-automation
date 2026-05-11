@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  
   "scripts": {
     "test": "npx playwright test",
     "test:ui": "npx playwright test --ui",
@@ -12,13 +13,14 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
     "@axe-core/playwright": "^4.11.3",
     "@playwright/test": "^1.59.1",
     "@types/node": "^25.6.2"
   },
   "dependencies": {
-    "axe-core": "^4.11.4"
+    "axe-core": "^4.11.4",
+    "typescript": "^6.0.3"
   }
 }

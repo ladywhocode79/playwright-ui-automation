@@ -1,0 +1,8 @@
+Accessibility violations found:
+violation: color-contrast
+Description: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds
+Impact: serious
+  Target: i
+  HTML: <i class="fa fa-2x fa-sign-in"> Login</i>
+  Failure Summary: Fix any of the following:
+  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #2ba6cb, font size: 24.0pt (32px), font weight: normal). Expected contrast ratio of 3:1

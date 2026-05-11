@@ -29,9 +29,15 @@ import * as fs from 'fs/promises';
                 reportLines.push('No accessibility violations found.');
             }
 
-        const reportFilePath = 'accessibility-report/accessibility_report.txt';  
-        await fs.promises.writeFile(reportFilePath, reportLines.join('\n'), 'utf-8');
-         expect(results.violations).toHaveLength(0);  
+        const timestamp = new Date().toISOString()
+        .slice(0, 19)
+        .replace(/:/g, '-')
+        .replace('T', '_'); 
+
+
+        const reportFilePath = `accessibility-report/accessibility_report_${timestamp}.txt`;  
+        await fs.writeFile(reportFilePath, reportLines.join('\n'), 'utf-8');
+         expect.soft(results.violations).toHaveLength(0);
         });
     }); 
 
